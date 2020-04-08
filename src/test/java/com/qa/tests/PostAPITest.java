@@ -48,7 +48,7 @@ public class PostAPITest extends TestBase{
 		Users users = new Users("morpheus", "leader"); //expected users obejct
 		
 		//object to json file:
-		mapper.writeValue(new File("/Users/vengateshdhanagopal/Documents/APIAutomationUsingHTTPClient/src/main/java/com/qa/data/users.json"), users);
+		mapper.writeValue(new File(System.getProperty("user.dir")+"/src/main/java/com/qa/data/users.json"), users);
 		
 		//java object to json in String:
 		String usersJsonString = mapper.writeValueAsString(users);
